@@ -49,7 +49,7 @@ public class utils {
 	{
 		Properties prop=new Properties();
 		FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\resources\\globals.properties");
-		prop.load(fis);
+		prop.load(fis); //properties file loaded
 		return prop.getProperty(key);
 	}
 	public String jsonpathparse(Response response,String key)

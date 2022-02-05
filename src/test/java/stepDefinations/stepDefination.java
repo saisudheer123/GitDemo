@@ -49,6 +49,7 @@ public class stepDefination extends utils {
 	{
 		//response.then().spec(commonresponsespecification()).extract().response();
 		assertEquals(response.getStatusCode(),200);
+		System.out.println(response.getStatusCode());
 	}
 	@Then("{string} in response body as {string}")
 	public void in_response_body_as(String string, String string2) {
@@ -67,6 +68,7 @@ public class stepDefination extends utils {
 	@Given("pass the DeletePlace api payload")
 	public void pass_the_delete_place_api_payload() throws IOException {
 		reqspec=given().spec(commonrequestspecification()).body(payloads.Deleteplace_payload(place_id));
+	    System.out.println("successful");
 	}
 	
 }
